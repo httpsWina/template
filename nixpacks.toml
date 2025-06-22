@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ['nodejs', 'bun']
+
+[phases.install]
+cmds = ['cd frontend && bun install']
+
+[phases.build]
+cmds = ['cd frontend && bun run build']
+
+[start]
+cmd = 'bun run server/index.ts'
